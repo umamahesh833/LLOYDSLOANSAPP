@@ -44,3 +44,22 @@ test.only('Test 13',async ({page})=>{
   expect(menus).toHaveLength(12)
 })
 
+test.only('Mahesh',async ({page})=>{
+
+  
+  console.log(DataSet.Url);
+  
+  const loginPage = new LoginPage(page)
+  await loginPage.Goto()
+  //await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+  await expect(page).toHaveTitle('OrangeHRM');
+  await loginPage.ValidLogin()
+  await expect(page).toHaveURL(/dashboard/)
+  await page.waitForLoadState('networkidle')
+  let menus = await page.locator("//ul[@class='oxd-main-menu']/li/a/span").allTextContents()
+  //console.log(menuone);
+  console.log(menus);
+  expect(menus.includes("Claim")).toBeTruthy()
+  expect(menus).toHaveLength(12)
+})
+
