@@ -6,7 +6,7 @@ const DataSet = JSON.parse(JSON.stringify(require('../TestData/DataSet.json')));
 
 
   
-test('Home Page dashboard menu validation',async ({page})=>{
+test('Home Page dashboard menu validation MORE',async ({page})=>{
 
   
   console.log(DataSet.Url);
@@ -25,7 +25,7 @@ test('Home Page dashboard menu validation',async ({page})=>{
   expect(menus).toHaveLength(12)
 })
 
-test('Test 13',async ({page})=>{
+test('Test 13 MORE',async ({page})=>{
 
   
   console.log(DataSet.Url);
@@ -44,7 +44,7 @@ test('Test 13',async ({page})=>{
   expect(menus).toHaveLength(12)
 })
 
-test('Mahesh',async ({page})=>{
+test('Mahesh MORE',async ({page})=>{
 
   
   console.log(DataSet.Url);
